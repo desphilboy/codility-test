@@ -1,0 +1,137 @@
+1. Similar Stock Traces
+Sally is a software engineer in an investment bank. She is trying to find similarities in the behaviour of different securities. Being new to the industry Sally has come up with a simple algorithm to decide if two stocks have "similar" behaviour. For each stock, she creates a "stock trace", which is simply an array of integers. Two "stock traces" are considered "similar" if they have the same length AND for each integer x, the number of occurrences of x in the two "stock traces" differs by no more than 3. You are given a pair of "stock traces", S and T, determine if they are "similar".
+
+ 
+
+Example
+
+s = [10, 10, 20, 10, 10, 20]
+
+t = [20, 20, 10, 20, 20, 30]
+
+ 
+
+Occurrences of 10 in s = 4 and in t = 1, difference is 3 
+Occurrences of 20 in s = 2 and in t = 4, difference is 2
+Occurrences of 30 in s = 0 and in t = 1, difference is 1
+The number of occurrences of 10, 20, and 30 in the two arrays never differs by more than 3. This "stock traces" are "similar" so the return value for this case is YES.
+
+ 
+
+Example
+
+s = [10, 10, 10, 10, 10, -20, -20, 30]
+
+t = [10, -20, -20, -20, -20, 10, -20, -20]
+
+ 
+
+Occurrences of 10 in s = 5 and in t = 2, difference is 3
+Occurrences of -20 in s = 2 and in t = 6, difference is 4
+Occurrences of 30 in s = 1 and in t = 0, difference is 1
+The difference in the number of occurrences of 20 is greater than 3 so the return value for this case is NO.
+
+
+Example
+
+s = [10, 20, 30] 
+
+t = [10, 20] 
+
+ 
+
+The number of elements in s and t is different. Therefore the return value for this case is NO.
+
+ 
+
+Function Description
+
+Complete the function tracesAreSimilar in the editor below. The function must return a string that is either 'YES' or 'NO'.
+
+ 
+
+tracesAreSimilar has the following parameters:
+
+    S and T are two arrays of integers
+
+ Function Description
+
+Complete the function tracesAreSimilar in the editor below. The function must return a string that is either 'YES' or 'NO'.
+
+ 
+
+tracesAreSimilar has the following parameters:
+
+    S and T are two arrays of integers
+
+ Constraints
+
+1 ≤ length of any array in the input ≤ 5 x 105
+-256 ≤ each integer in any array ≤ 256 
+ 
+
+Input Format For Custom Testing
+The first line contains a single integer n, the size of S.
+
+Each line i of the n subsequent lines (where 1 ≤ i ≤ n) contains an integer that describes S[i].
+
+
+The next line contains a single integer m, the size of T.
+
+Each line i of the m subsequent lines (where 1 ≤ i ≤ m) contains an integer that describes T[i].
+
+ 
+
+Sample Case 0
+Sample Input For Custom Testing
+
+STDIN    Function
+-----    --------
+3          →  s[] size n = 3
+10 
+10 
+10         →  s = [10, 10, 10]
+3          →  t[] size m = 3
+10 
+10 
+20         →  t = [10, 10, 20]
+Sample Output
+
+YES
+Explanation
+
+Only integers 10 and 20 are present in the two arrays. The number of occurrences of 10 differs by 1 and the number of occurrences of 20 also differs by 1, so the return value is YES.
+
+ 
+
+Sample Case 1
+Sample Input For Custom Testing
+
+STDIN         Function
+-----         --------
+4             → s[] size n = 4
+10 
+10 
+10 
+10            → s = [10, 10, 10, 10]
+4             → t[] size m = 4
+20 
+20 
+20 
+20            → t = [20, 20, 20, 20]
+Sample Output
+
+NO
+Explanation
+
+Integer 10 occurs 4 times in the first array while it doesn't occur at all in the second array, so the return value is NO.
+
+Constraints
+
+1 ≤ length of any array in the input ≤ 5 x 105
+-256 ≤ each integer in any array ≤ 256 
+ 
+
+Input Format For Custom Testing
+Sample Case 0
+Sample Case 1
